@@ -40,3 +40,23 @@ class Queue_pointer_approach {
 }
 
 
+class Queue_shifting_approach{
+  constructor(){
+    this.items = [];
+  };
+
+  isEmpty(){
+    return this.items.length === 0;
+  };
+
+  enqueue(value){
+    this.items.push(value);
+  };
+
+  dequeue(){
+    if(this.isEmpty()){
+      throw new Error("empty queue")
+    }
+    return this.items.shift();
+  }
+}
