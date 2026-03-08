@@ -60,3 +60,25 @@ class Queue_shifting_approach{
     return this.items.shift();
   }
 }
+
+
+// let q = new Queue_shifting_approach();
+// q.enqueue(10);
+// q.enqueue(20);
+// q.enqueue(30);
+
+// console.log(q.dequeue())
+// console.log(q.dequeue())
+// console.log(q.dequeue())
+// // console.log(q.dequeue())
+
+// let q2 = new Queue_pointer_approach();
+
+// q2.enqueue(10)
+// q2.enqueue(20)
+// q2.enqueue(30)
+
+// console.log(q2.dequeue())
+// console.log(q2.dequeue())
+// console.log(q2.dequeue())
+// console.log(q2.dequeue())
