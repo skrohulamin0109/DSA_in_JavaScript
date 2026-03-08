@@ -13,7 +13,7 @@ class Deque_pointer_approach {
         }
     }
 
-    enqueueAtBeg(value) {
+    enqueueAtEnd(value) {
         if (this.isEmpty()) {
             this.front = 0;
             this.rear = 0;
@@ -23,12 +23,40 @@ class Deque_pointer_approach {
         this.items.push(value);
     }
 
-    dequeueAtEnd() {
+        enqueueAtBeg(value) {
+        if (this.isEmpty()) {
+            this.front = 0;
+            this.rear = 0;
+            this.items[0] = value;
+        } else if(this.front > 0 ){
+          this.front -= 1;
+          this.items[this.front] = value;
+        }else{
+          throw new Error("no space for insertion at the begining")
+        }
+    }
+
+    dequeueAtBeg() {
         if (this.isEmpty()) {
             throw new Error("empty queue");
         }
         let remItem = this.items[this.front];
         this.front += 1;
+
+        if (this.isEmpty()) {
+            this.items = [];
+            this.front = -1;
+            this.rear = -1;
+        }
+        return remItem;
+    }
+
+    dequeueAtEnd() {
+        if (this.isEmpty()) {
+            throw new Error("empty queue");
+        }
+        let remItem = this.items[this.rear];
+        this.rear -= 1;
 
         if (this.isEmpty()) {
             this.items = [];
