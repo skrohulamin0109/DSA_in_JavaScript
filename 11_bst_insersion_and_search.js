@@ -28,28 +28,26 @@ function insert(root, value) {
 
 function inOrderTr(root) {
     if (root === null) return;
-    
-        inOrderTr(root.left);
-        console.log(root.data);
-        inOrderTr(root.right);
-    
+
+    inOrderTr(root.left);
+    console.log(root.data);
+    inOrderTr(root.right);
 }
 
-function search(root, value){
-  if(root === null){
-    return null; // use ful return value, someone can use this to do some logical task. A falsy value.
-  };
+function search(root, value) {
+    if (root === null) {
+        return null; // use ful return value, someone can use this to do some logical task. A falsy value.
+    }
 
-  if(root.data === value){
-    return root; // returns the whole root Node (object), left, right and the data. An object is a truthy value. Can be used for logical operations.
-  };
+    if (root.data === value) {
+        return root; // returns the whole root Node (object), left, right and the data. An object is a truthy value. Can be used for logical operations.
+    }
 
-  if(root.data > value){
-    return search(root.left, value);
-  }else{
-    return search(root.right, value);
-  };
-
+    if (root.data > value) {
+        return search(root.left, value);
+    } else {
+        return search(root.right, value);
+    }
 }
 
 // let root = new Node(20);
@@ -61,12 +59,12 @@ function search(root, value){
 
 let root = insert(null, 20);
 root = insert(root, 15); // we are updating the root as the root "might" get changed and our insert always returns the new root.
-root = insert(root, 30)
-root = insert(root, 40)
-root = insert(root, 12)
-root = insert(root, 18)
-root = insert(root, 25)
-root = insert(root, 50)
+root = insert(root, 30);
+root = insert(root, 40);
+root = insert(root, 12);
+root = insert(root, 18);
+root = insert(root, 25);
+root = insert(root, 50);
 inOrderTr(root);
 console.log(search(root, 18));
 console.log(search(root, 100));
