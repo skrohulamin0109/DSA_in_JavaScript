@@ -9,6 +9,7 @@ class Graph {
             }
             this.mat.push(row);
         }
+
         this.size = vertex;
     }
 
@@ -18,12 +19,12 @@ class Graph {
           this.mat[src_u][directn_v] = weight;
           this.mat[directn_v][src_u] = weight; // if unidirectional edge, remove this.
         }else{
-          throw new Error("Edge outsie range.")
+          throw new Error("Edge is outside range.")
         }
       }
 
       print_graph(){
-        console.log(this.mat)// gives the array
+        // console.log(this.mat)// gives the array
         // We want a pure string representation.
         for(let i = 0; i < this.size; i++){
           let row_str = this.mat[i].map(item => item.toString())

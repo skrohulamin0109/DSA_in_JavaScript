@@ -4,7 +4,7 @@ class Graph {
     };
 
     addVertex(vertex){
-      if(!Object.hasOwn(this.adjList, vertex)){
+      if(!Object.hasOwn(this.adjList, vertex)){ // checks if the object this.adjList already has the key called vertex.
         this.adjList[vertex] = []; // makes a key of that vertex and assigns an empty array of destinations or list of destinations.
       };
       return;
@@ -21,7 +21,7 @@ class Graph {
     printGraph(){
      let keyArr = Object.keys(this.adjList);
       for(let i = 0; i < keyArr.length; i++){
-    // the keys would be , this.keyArr[i],,, value would be this.adjList[this.keyArr[i]]
+    // the keys would be , keyArr[i],,, value would be this.adjList[keyArr[i]]
       console.log(keyArr[i], "--->", this.adjList[keyArr[i]])      
       }
     }
