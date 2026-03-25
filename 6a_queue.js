@@ -20,7 +20,7 @@ class Queue_pointer_approach {
         } else {
             this.rear += 1;
         }
-        this.items.push(value);
+        this.items[this.rear] = value;
     }
 
     dequeue() {
@@ -82,3 +82,5 @@ class Queue_shifting_approach{
 // console.log(q2.dequeue())
 // console.log(q2.dequeue())
 // console.log(q2.dequeue())
+
+export {Queue_pointer_approach};

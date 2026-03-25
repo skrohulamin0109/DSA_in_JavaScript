@@ -1,3 +1,9 @@
+//True deque needs preallocated space
+
+// this.items = new Array(N)
+// this.front = middle
+// this.rear  = middle - 1
+
 class Deque_pointer_approach {
     constructor() {
         this.items = [];
@@ -99,3 +105,7 @@ class Deque_shifting_approach{
   return this.items.pop();
   }
 }
+
+
+
+export {Deque_pointer_approach};
