@@ -1,4 +1,4 @@
-const selectionSort = (array) => {
+const selectionSort = (array) => { // we are putting it in increasing order , you can do decreasng as well. Two ways to do both.
     const n = array.length;
     for (const [index, item] of array.entries()) {
         let min = index; // assuming the minimum value is prestent at at the first index of the loop.
