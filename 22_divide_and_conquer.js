@@ -63,3 +63,18 @@ function findMinMaxRec(arr, start, end) {
     max: Math.max(max1, max2),
   };
 }
+
+
+console.log(findMinMax([3, 5, 1, 8, 2]));
+
+
+console.log(findMinMax([7]));
+
+
+console.log(findMinMax([9, 2]));
+
+
+console.log(findMinMax([-3, -1, -7, -2]));
+
+
+console.log(findMinMax([]));
